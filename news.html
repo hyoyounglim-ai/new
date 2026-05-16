@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News — EDGE Lab</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .news-list { display: flex; flex-direction: column; gap: 0; }
+
+    .news-item {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 24px;
+      padding: 24px 0;
+      border-bottom: 1px solid var(--border);
+      align-items: start;
+    }
+    .news-item:first-child { border-top: 1px solid var(--border); }
+
+    .news-date {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-weight: 500;
+      padding-top: 3px;
+      white-space: nowrap;
+    }
+
+    .news-category {
+      display: inline-flex;
+      align-items: center;
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-bottom: 8px;
+    }
+    .cat-paper   { background: #dbeafe; color: #1d4ed8; }
+    .cat-award   { background: #dcfce7; color: #166534; }
+    .cat-talk    { background: #fef3c7; color: #92400e; }
+    .cat-lab     { background: #f3e8ff; color: #7c3aed; }
+    .cat-news    { background: #f1f5f9; color: #475569; }
+
+    .news-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 6px;
+      line-height: 1.5;
+    }
+
+    .news-body {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    .news-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.8rem;
+      color: var(--accent);
+      text-decoration: none;
+      margin-top: 8px;
+      font-weight: 500;
+    }
+    .news-link:hover { text-decoration: underline; }
+
+    .year-divider {
+      font-size: 1.2rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      color: var(--text-primary);
+      margin: 48px 0 0;
+      padding-bottom: 12px;
+    }
+    .year-divider:first-child { margin-top: 0; }
+
+    @media (max-width: 600px) {
+      .news-item { grid-template-columns: 1fr; gap: 6px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">EDGE<span>Lab</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="members.html">Members</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="teaching.html">Teaching</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+    </ul>
+    <button class="hamburger" aria-label="메뉴"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="news.html">News</a>
+  <a href="members.html">Members</a>
+  <a href="research.html">Research</a>
+  <a href="publications.html">Publications</a>
+  <a href="teaching.html">Teaching</a>
+  <a href="gallery.html">Gallery</a>
+</div>
+
+<main>
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <div class="section-label">Latest Updates</div>
+      <h1 class="page-hero-title">News</h1>
+      <p class="page-hero-sub">Recent news and updates from EDGE Lab.</p>
+    </div>
+  </div>
+
+  <section class="section">
+
+    <!-- 2025 -->
+    <div class="year-divider">2025</div>
+    <div class="news-list">
+
+      <div class="news-item fade-in">
+        <div class="news-date">2025.11</div>
+        <div>
+          <div><span class="news-category cat-paper">Paper</span></div>
+          <div class="news-title">군사과학기술학회 추계학술대회 논문 4편 발표</div>
+          <div class="news-body">
+            "듀티사이클 IoT 환경에서의 재밍 전략 연구", "군사 IoT 엣지 포그 기반 분산형 데이터 운영 모델",
+            "저궤도 위성을 이용한 항공 전술 데이터링크 확장", "해상 무인체계 위협 식별을 위한 감시 장치 개발" 등
+            4편의 논문을 군사과학기술학회 추계학술대회에서 발표하였습니다.
+          </div>
+        </div>
+      </div>
+
+      <div class="news-item fade-in">
+        <div class="news-date">2025.10</div>
+        <div>
+          <div><span class="news-category cat-paper">Journal</span></div>
+          <div class="news-title">신뢰성 기반 UAS 식별 프로토콜 표준화 동향 분석 게재</div>
+          <div class="news-body">
+            "신뢰성 기반 UAS 식별 프로토콜 표준화 동향 분석" 논문이 <em>군사과학연구</em> 18-2호에 게재되었습니다.
+          </div>
+        </div>
+      </div>
+
+      <div class="news-item fade-in">
+        <div class="news-date">2025.05</div>
+        <div>
+          <div><span class="news-category cat-lab">Lab</span></div>
+          <div class="news-title">임효영 교수, 국방대학교 사이버·컴퓨터공학과 조교수 부임</div>
+          <div class="news-body">
+            임효영 교수가 국방대학교 사이버·컴퓨터공학과 조교수로 부임하여 EDGE Lab을 창설하였습니다.
+            네트워크 시스템, Edge AI, 군사 사이버보안 분야의 연구를 이어갑니다.
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 2024 -->
+    <div class="year-divider">2024</div>
+    <div class="news-list">
+
+      <div class="news-item fade-in">
+        <div class="news-date">2024.11</div>
+        <div>
+          <div><span class="news-category cat-paper">Paper</span></div>
+          <div class="news-title">한국군사과학기술학회 추계학술대회 논문 발표</div>
+          <div class="news-body">
+            "군 네트워크에서 엣지 서버를 활용한 AI 추론 및 학습 최적화 방안 연구"를
+            한국군사과학기술학회 추계학술대회에서 발표하였습니다.
+          </div>
+        </div>
+      </div>
+
+      <div class="news-item fade-in">
+        <div class="news-date">2024.10</div>
+        <div>
+          <div><span class="news-category cat-talk">Talk</span></div>
+          <div class="news-title">2024 육군 국제 M&S학술대회 초청 발표</div>
+          <div class="news-body">
+            "Edge AI for Military Operations: Performance and Strategic Benefits" 주제로
+            2024년 육군 국제 M&S학술대회 국제M&S세미나에서 초청 발표를 진행하였습니다.
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 2023 -->
+    <div class="year-divider">2023</div>
+    <div class="news-list">
+
+      <div class="news-item fade-in">
+        <div class="news-date">2023.08</div>
+        <div>
+          <div><span class="news-category cat-lab">Lab</span></div>
+          <div class="news-title">University of Colorado Boulder 박사 학위 취득</div>
+          <div class="news-body">
+            임효영 교수가 University of Colorado Boulder 컴퓨터과학과에서 박사 학위를 취득하였습니다.
+            박사 논문 제목: "Understanding the Impact of Congestion Control Algorithms on Emerging Networks and Applications" (지도교수: Prof. Sangtae Ha).
+          </div>
+        </div>
+      </div>
+
+      <div class="news-item fade-in">
+        <div class="news-date">2023.05</div>
+        <div>
+          <div><span class="news-category cat-paper">Journal</span></div>
+          <div class="news-title">IEEE Transactions on Mobile Computing 논문 게재</div>
+          <div class="news-body">
+            "An empirical study of 5G: Effect of edge on transport protocol and application performance" 논문이
+            <em>IEEE Transactions on Mobile Computing</em>에 게재되었습니다.
+          </div>
+          <a href="publications.html" class="news-link">Publications 보기 →</a>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">EDGE Lab</div>
+      <p class="footer-desc">국방대학교 사이버·컴퓨터공학과.<br>네트워크 프로토콜, Edge AI, 사이버보안 연구.</p>
+    </div>
+    <div>
+      <div class="footer-col-title">Navigation</div>
+      <ul class="footer-links">
+        <li><a href="news.html">News</a></li>
+        <li><a href="members.html">Members</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="teaching.html">Teaching</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Contact</div>
+      <ul class="footer-links">
+        <li><a href="#">국방대학교, 충남 논산</a></li>
+        <li><a href="mailto:hyoyounglim1@gmail.com">hyoyounglim1@gmail.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 EDGE Lab, 국방대학교</span>
+    <span>Hyoyoung Lim</span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
