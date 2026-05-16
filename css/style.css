@@ -136,7 +136,7 @@ main { padding-top: var(--nav-height); }
   max-width: var(--max-width);
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 380px;
+  grid-template-columns: 1fr 520px;
   gap: 60px;
   align-items: center;
 }
