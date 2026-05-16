@@ -332,7 +332,9 @@ main { padding-top: var(--nav-height); }
   flex-shrink: 0;
   letter-spacing: 0.05em;
 }
-.news-scroll { white-space: nowrap; overflow: hidden; }
+.news-ticker { position: relative; overflow: hidden; flex: 1; height: 1.4em; }
+.news-tick { position: absolute; inset: 0; white-space: nowrap; opacity: 0; transition: opacity 0.6s ease; }
+.news-tick.active { opacity: 1; }
 
 /* ── Members ── */
 .member-grid {

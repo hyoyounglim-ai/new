@@ -90,3 +90,15 @@ if (lightbox) {
 
   setInterval(() => goTo(current + 1), 3500);
 })();
+
+/* ── News ticker ── */
+(function () {
+  const ticks = document.querySelectorAll('.news-tick');
+  if (!ticks.length) return;
+  let cur = 0;
+  setInterval(() => {
+    ticks[cur].classList.remove('active');
+    cur = (cur + 1) % ticks.length;
+    ticks[cur].classList.add('active');
+  }, 4000);
+})();
