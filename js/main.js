@@ -67,3 +67,26 @@ if (lightbox) {
   lightbox.addEventListener('click', e => { if (e.target === lightbox) lightbox.classList.remove('open'); });
   document.addEventListener('keydown', e => { if (e.key === 'Escape') lightbox.classList.remove('open'); });
 }
+
+/* ── Hero Slideshow ── */
+(function () {
+  const slides = document.querySelectorAll('.hero-slideshow .slide');
+  const dots = document.querySelectorAll('.hero-slideshow .dot');
+  if (!slides.length) return;
+
+  let current = 0;
+
+  function goTo(idx) {
+    slides[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = (idx + slides.length) % slides.length;
+    slides[current].classList.add('active');
+    dots[current].classList.add('active');
+  }
+
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => goTo(+dot.dataset.idx));
+  });
+
+  setInterval(() => goTo(current + 1), 3500);
+})();
